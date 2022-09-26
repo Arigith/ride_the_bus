@@ -9,6 +9,7 @@
 
 import random
 
+drink_total = 0
 deck_size = 2
 # Request system to generate 2 random numbers between 1 and 13
 # to stop any repeats I added None to indicate end of deck
@@ -32,3 +33,4 @@ for hole_card, next_card in zip(deck[:-1],deck[1:]):
 # If play was incorret then print following statement
     if guess != correct_guess:
         print(f'You loose the next card was {next_card}')
+        drink_total += 1
