@@ -9,28 +9,28 @@
 
 import random
 
+hlround = True
+
 drink_total = 0
 deck_size = 2
 # Request system to generate 2 random numbers between 1 and 13
 # to stop any repeats I added None to indicate end of deck
 deck = random.sample(range(1, 14), deck_size) + [None]
 
+while True:
 # Splits the 2 chosen numbers into chosen card (hole_card and next_card)
-for hole_card, next_card in zip(deck[:-1],deck[1:]):
-# Winner arguement
-    if next_card == None: 
-        print('Winner')
-        break
-
+    for hole_card, next_card in zip(deck[:-1],deck[1:]):
 # Arguement to say that if the next card is greater then hole card then this is higher otherwise it is lower
-    correct_guess = 'h' if next_card > hole_card else 'l'
-
+        correct_guess = 'h' if next_card > hole_card else 'l'
 # Player chooses higher or lower
-    guess = input(f'current card is {hole_card} is the next higher or lower? ') 
-
+        guess = input(f'current card is {hole_card} is the next higher or lower? ') 
 # System checks if player was correct or incorrect
-# If player was correct then change nextcard to be None and run lines 21 to 23
 # If play was incorret then print following statement
-    if guess != correct_guess:
-        print(f'You loose the next card was {next_card}')
-        drink_total += 1
+        if guess != correct_guess:
+            print(f'You loose the next card was {next_card}')
+            drink_total += 1
+        else:
+# If player was correct then print winner
+            print(f'you choice of {guess} was correct. You win')
+            print(f'Your drink tally is {drink_total}')
+            hlround = False
