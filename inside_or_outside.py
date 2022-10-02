@@ -15,15 +15,17 @@ import random
 
 drinks_count = 0
 
-deck_size = 3
+deck_range = range(1, 14)
+deck_size = 2
 
-deck = random.sample(range(1, 14), deck_size) + [None]
+deck = sorted(random.sample(deck_range, deck_size))
 
-for hole_card_1, hole_card_2, next_card in zip(deck[:1],deck[1:],deck[2:]):
-    # print(hole_card_1)
-    # print(hole_card_2)
-    # print(next_card)
-    user_guess = input(f'The dealer has picked {hole_card_1} and {hole_card_2}.\nWill the next card be inbetween or outside?(i/o)\n').lower()
-    if user_guess != 'i' and user_guess != 'o':
-        print(f'{user_guess} is not a valid choice. Please try again')
-    # elif user_guess > hole_card_1 and 
+for hole_card_1, hole_card_2 in zip(deck[:-1],deck[1:]):
+        print(hole_card_1)
+        print(hole_card_2)
+        next_card = random.choice([dr2 for dr2 in deck_range if dr2 != hole_card_1 and dr2 != hole_card_2])
+        print(next_card)
+        user_guess = input(f'The dealer has picked {hole_card_1} and {hole_card_2}.\nWill the next card be inbetween or outside?(i/o)\n').lower()
+        if user_guess != 'i' and user_guess != 'o':
+            print(f'{user_guess} is not a valid choice. Please try again')
+        elif 

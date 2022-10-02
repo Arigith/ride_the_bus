@@ -29,7 +29,7 @@ for hole_card, next_card in zip(deck[:-1],deck[1:]):
     guess = input(f'current card is {hole_card} is the next higher or lower? ') 
 
 # System checks if player was correct or incorrect
-# If player was correct then change nextcard to be None and run lines 19 to 21
+# If player was correct then change nextcard to be None and run lines 21 to 23
 # If play was incorret then print following statement
     if guess != correct_guess:
         print(f'You loose the next card was {next_card}')
