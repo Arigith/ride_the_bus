@@ -25,7 +25,8 @@ while is_guess_right != True:
         print(f'\n{player_choice} is an invalid choice please try again.\n')
     elif player_choice == dealers_choice:
         print(f'Your guess of {player_choice} was correct. \n YOU WIN!')
+        print(f'Your drink total is {drink_count}')
         is_guess_right = True
     else:
-        print(f'You guessed {player_choice} while the dealer chose {dealers_choice}.\n YOU LOOSE! ')
+        print(f'You guessed {player_choice} while the dealer chose {dealers_choice}.\n YOU LOSE! ')
         drink_count += 1

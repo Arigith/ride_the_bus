@@ -25,5 +25,5 @@ while is_guess_right != True:
         print(f'The total drinks tally is {drink_count}')
         is_guess_right = True
     else:
-        print(f'You guessed {player_choice} while the dealer chose {dealers_choice}.\n YOU LOOSE! ')
+        print(f'You guessed {player_choice} while the dealer chose {dealers_choice}.\n YOU LOSE! ')
         drink_count += 1

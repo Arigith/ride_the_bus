@@ -20,6 +20,8 @@ deck = random.sample(range(1, 14), deck_size) + [None]
 while True:
 # Splits the 2 chosen numbers into chosen card (hole_card and next_card)
     for hole_card, next_card in zip(deck[:-1],deck[1:]):
+        print(hole_card)
+        print(next_card)
 # Arguement to say that if the next card is greater then hole card then this is higher otherwise it is lower
         correct_guess = 'h' if next_card > hole_card else 'l'
 # Player chooses higher or lower
