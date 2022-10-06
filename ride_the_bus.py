@@ -47,6 +47,5 @@ def begin(): #game introduction/rules
 begin()
 # starting first level of game, red or black?
 # user is dealt a card from shuffled deck
-
 # user makes a guess
 r_or_b = input('Red or Black? R/B ')

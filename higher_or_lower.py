@@ -9,8 +9,6 @@
 
 import random
 
-hlround = True
-
 drink_total = 0
 deck_size = 2
 # Request system to generate 2 random numbers between 1 and 13

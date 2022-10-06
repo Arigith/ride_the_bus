@@ -9,7 +9,6 @@ What should happen
 4. If incorrect then system prints message stating they are wrong and adds a drink to the required drinks tally
 5. If correct then system prints message stating they won and then tells total of drinks required
 '''
-
 import random
 
 drink_count = 0
